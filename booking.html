@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Welcome, name!</label><BR></BR>
+    <div id="main">
+        <label for="">From</label>
+        <select name="" id="sel1">
+            <option value="st1" id="st1">st1</option>
+            <option value="st2" id="st2">st2</option>
+            <option value="st3" id="st3">st3</option>
+        </select>
+        <label for="">To</label>
+        <select name="" id="sel2">
+            <option value="st1" id="st1">st1</option>
+            <option value="st2" id="st2">st2</option>
+            <option value="st3" id="st3">st3</option>
+        </select><BR></BR>
+        <label for="">Adult</label>
+        <input type="number" id="adt" class="inp">
+        <label for="">Child</label>
+        <input type="number" id="child" class="inp"><BR></BR>
+        <label for="">Ticket Type</label>
+        <select name="" id="sel3">
+            <option value="Journey" id="Journey">Journey</option>
+            <option value="Ret" id="ret">Return</option>
+        </select><BR></BR>
+        <label for="">Train Type</label>
+        <select name="" id="sel4">
+            <option value="Ordinary" id="ord">Ordinary</option>
+            <option value="Superfast" id="spf">Superfast</option>
+            <option value="Express" id="exp">Express</option>
+        </select><BR></BR>
+        <label for="">Class Type</label>
+        <select name="" id="sel5">
+            <option value="First Class" id="fc">First Class</option>
+            <option value="Second Class" id="sc">Second Class</option>
+        </select><BR></BR>
+        <Button id="calc" onclick="a()">Calculate</Button><BR></BR>
+        <label for="" id="fair"></label>
+        <BR></BR>
+        <label for="">Payment Type</label><br><br>
+        <input id="rw" name="pt" value="Rail Wallet" type="radio">Rail Wallet
+        <input id="upi" name="pt" value="UPI" type="radio">UPI
+        <input id="cd" name="pt" value="Credit/Debit Card" type="radio">Credit/Debit Card
+        <BR></BR> <BUTTon onclick="b()">Continue Payment</BUTTon>
+    </div>
+    <script>
+        function a() {
+            var p1 = 10
+            var p1c = 5
+            var p2 = 15
+            var p2c = 10
+            var p3 = 20
+            var p3c = 10
+            var exp = 1.5
+            var spf = 2
+            var fc = 2
+            var sc = 1
+            var ret = 2
+            var ad = document.getElementById("adt").value
+            var ch = document.getElementById("child").value
+
+            if (document.getElementById("sel1").value == "st1" && document.getElementById("sel2").value == "st2") {
+                var amt = (ad*p1)+(ch*p1c)
+                document.getElementById("fair").textContent=amt
+            }
+        }
+        function b(){
+            var abc=document.querySelector("input[name='pt']:checked").value
+            document.getElementById("fair").textContent=abc
+            localStorage.setItem("pack1",document.getElementById("sel1").value)
+            localStorage.setItem("pack2",document.getElementById("sel2").value)
+            localStorage.setItem("pack3",document.getElementById("adt").textContent)
+            localStorage.setItem("pack4",document.getElementById("child").textContent)
+            localStorage.setItem("pack5",document.getElementById("sel3").value)
+            localStorage.setItem("pack6",document.getElementById("sel4").value)
+            localStorage.setItem("pack7",document.getElementById("sel5").value)
+            localStorage.setItem("pack8",document.getElementById("fair").textContent)
+            localStorage.setItem("pack9",abc)
+            window.location.href="preview.html"
+        }
+    </script>
+</body>
+
+</html>

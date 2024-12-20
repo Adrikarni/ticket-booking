@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        From:
+        <label for="" id="v1"></label><br>
+        To:
+        <label for="" id="v2"></label><br>
+
+        <label for="" id="v3"></label><br>
+        Train Type:
+        <label for="" id="v6"></label><br>
+
+        Ticket Type:
+        <label for="" id="v5"></label><br>
+        Class Type:
+        <label for="" id="v4"></label>
+        <label for="" id="v7"></label></BR>
+        Payment Type:
+        <label for="" id="v8"></label>
+    </div>
+
+    <script>
+        var l1 = document.getElementById("v1")
+        var l2 = document.getElementById("v2")
+        var l3 = document.getElementById("v3")
+        var l4 = document.getElementById("v4")
+        var l5 = document.getElementById("v5")
+        var l6 = document.getElementById("v6")
+        var l7 = document.getElementById("v7")
+        var l8 = document.getElementById("v8")
+        l1.textContent = localStorage.getItem("pack1")
+        l2.textContent = localStorage.getItem("pack2")
+        l3.textContent = localStorage.getItem("pack3")
+        l4.textContent = localStorage.getItem("pack4")
+        l5.textContent = localStorage.getItem("pack5")
+        l6.textContent = localStorage.getItem("pack6")
+        l7.textContent = localStorage.getItem("pack7")
+        l8.textContent = localStorage.getItem("pack8")
+        l9.textContent = localStorage.getItem("pack9")
+    </script>
+</body>
+
+</html>
