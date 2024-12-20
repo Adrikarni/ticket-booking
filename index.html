@@ -7,6 +7,10 @@
 </head>
 
 <body>
+    <div id="sqa"></div>
+    <div id="sqb"></div>
+    <div id="sqc"></div>
+    <div id="sqd"></div>
     <div id="diva">
         <label for="" id="lbl1">TRAIN TICKET BOOKING SYSTEM</label><BR></BR>
         <label for="" id="lbl2">LOGIN</label><BR></BR>
@@ -21,6 +25,61 @@
         <button onclick="b()" id="btn2">Forgot password?</button>
     </div>
     <style>
+        #sqa{
+            border: white solid 5px;
+            height: 200;
+            background-color: white;
+            min-width:200;
+            position: absolute;
+            opacity: 40%;
+            rotate: 50deg;
+            z-index: 1;
+            margin-top: -250;
+            margin-left: -800;
+            
+        }
+        #sqb{
+            border: white solid 5px;
+            height: 200;
+            background-color: white;
+            min-width:200;
+            position: absolute;
+            opacity: 40%;
+            rotate: 50deg;
+            z-index: 2;
+            margin-top: -250;
+            margin-left: -700;
+        }
+        #sqc{
+            border: white solid 5px;
+            height: 200;
+            background-color: white;
+            min-width:200;
+            position: absolute;
+            opacity: 60%;
+            rotate: 60deg;
+            z-index: 1;
+            margin-top: 200;
+            margin-left: 800;
+            
+            
+        }
+        #sqd{
+            border: white solid 5px;
+            height: 200;
+            background-color: white;
+            min-width:200;
+            position: absolute;
+            opacity: 60%;
+            rotate: 60deg;
+            z-index: 2;
+            margin-top: 200;
+            margin-left: 700;
+        }
+        body{
+            background-image: linear-gradient(150deg, #ffcc66, #ffffcc);
+
+        }
         #inp3{
             margin-bottom: 40px;
             margin-top: 20;
@@ -28,18 +87,21 @@
         #lbl2 {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 24;
-
+            color: white;
+            text-shadow: 5px 2px 5px;
         }
 
         #lbl1 {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 28;
+            color: white;
+            text-shadow: 5px 2px 5px;
         }
 
         #btn {
             height: 40;
             width: 100;
-            border: 2px solid;
+            border: 2px solid white;
             border-radius: 50px;
             box-shadow: 5px 5px 10px;
             background-color: white;
@@ -49,7 +111,7 @@
             height: 40;
             width: 100;
             background-color: white;
-            border: 2px solid;
+            border: 2px solid white;
             text-align: center;
             border-radius: 50px;
             box-shadow: 5px 5px 10px;
@@ -65,7 +127,7 @@
             width: 400;
             padding: 10;
             margin-bottom: 20;
-            border: 2px solid;
+            border: 2px solid white;
             border-radius: 10px;
 
         }
@@ -81,7 +143,7 @@
             color: blue;
             font-size: 15;
         }
-
+   
         body {
             display: flex;
             justify-content: center;
@@ -90,13 +152,17 @@
         }
 
         #diva {
-            border: 5px solid;
+            border: 5px;
             padding: 30;
             border-radius: 15px;
             width: 500;
             height: 350;
+            position: absolute;
+            z-index: 2;
+            background-image: linear-gradient(50deg, #ff99cc, #cc99ff, #66ccff);
             text-align: center;
             align-items: center;
+            box-shadow: 15px 15px  white;
         }
     </style>
     <script>
@@ -135,7 +201,7 @@
             }
             else {
                 alert("Not verified")
-                document.getElementById("inp3").style.cssText = "border-color:red;"
+                document.getElementById("inp4").style.cssText = "border-color:red;"
             }
         }
     </script>
